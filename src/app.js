@@ -1,11 +1,33 @@
-/* eslint-disable */
-import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+let generateExcuse = () => {
+  let pronoun = ["A"];
+  let subject = ["hippie", "cat", "goat", "musician", "doctor"];
+  let action = ["stole my", "ate my", "burned my", "damaged my"];
+  let possession = ["school work", "notebook", "laptop", "research paper"];
+  let where = [
+    "on the beach",
+    "at the grocery store",
+    "at the bank",
+    "at the bakery"
+  ];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  let pronounIndex = Math.floor(Math.random() * pronoun.length);
+  let subjectIndex = Math.floor(Math.random() * subject.length);
+  let actionIndex = Math.floor(Math.random() * action.length);
+  let possessionIndex = Math.floor(Math.random() * possession.length);
+  let whereIndex = Math.floor(Math.random() * where.length);
+
+  return (
+    pronoun[pronounIndex] +
+    " " +
+    subject[subjectIndex] +
+    " " +
+    action[actionIndex] +
+    " " +
+    possession[possessionIndex] +
+    " " +
+    where[whereIndex]
+  );
 };
+document.querySelector("#the-excuse").innerHTML = generateExcuse();
