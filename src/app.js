@@ -1,7 +1,7 @@
 import { Button } from "bootstrap";
 import "./style.css";
 
-function generateExcuse() {
+
   let pronoun = ["A"];
   let subject = ["hippie", "cat", "goat", "musician", "doctor"];
   let action = ["stole my", "ate my", "burned my", "damaged my"];
@@ -13,13 +13,13 @@ function generateExcuse() {
     "at the bakery"
   ];
 
+function generateExcuse() {
+
   let pronounIndex = Math.floor(Math.random() * pronoun.length);
   let subjectIndex = Math.floor(Math.random() * subject.length);
   let actionIndex = Math.floor(Math.random() * action.length);
   let possessionIndex = Math.floor(Math.random() * possession.length);
   let whereIndex = Math.floor(Math.random() * where.length);
-
-  console.log(8);
 
   return (
     pronoun[pronounIndex] +
